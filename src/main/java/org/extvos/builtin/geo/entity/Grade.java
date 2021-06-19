@@ -1,4 +1,4 @@
-package org.extvos.builtin.entity;
+package org.extvos.builtin.geo.entity;
 
 /**
  * @author Mingcai SHEN

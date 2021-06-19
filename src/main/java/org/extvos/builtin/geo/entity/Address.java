@@ -1,4 +1,4 @@
-package org.extvos.builtin.entity;
+package org.extvos.builtin.geo.entity;
 
 //import javax.persistence.*;
 
@@ -24,8 +24,10 @@ public class Address implements Serializable {
     @TableId(type = IdType.NONE)
     private Long id;
 
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
     private String zipCode;
 
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
     private String cityCode;
 
     private String name;
@@ -34,6 +36,7 @@ public class Address implements Serializable {
 
     private Double lng;
 
+    @JsonInclude(JsonInclude.Include.NON_DEFAULT)
     private Long parentId;
 
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
@@ -71,7 +74,7 @@ public class Address implements Serializable {
 
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd hh:mm:ss")
-    @JsonInclude(JsonInclude.Include.NON_EMPTY)
+    @JsonInclude(JsonInclude.Include.NON_DEFAULT)
     private Timestamp updated;
 
     public static long getSerialVersionUID() {

@@ -1,7 +1,7 @@
-package org.extvos.builtin.controller;
+package org.extvos.builtin.geo.controller;
 
-import org.extvos.builtin.entity.Address;
-import org.extvos.builtin.service.AddressService;
+import org.extvos.builtin.geo.entity.Address;
+import org.extvos.builtin.geo.service.AddressService;
 import org.extvos.restlet.QuerySet;
 import org.extvos.restlet.controller.BaseController;
 import org.extvos.restlet.exception.RestletException;
@@ -17,7 +17,7 @@ import java.sql.Timestamp;
 /**
  * @author Mingcai SHEN
  */
-@Api(tags = {"地址信息"}, value = "读写")
+@Api(tags = {"地址管理"}, value = "读写")
 @RequestMapping(value = "/_builtin/geo/_address")
 @RestController
 @ConditionalOnProperty(prefix = "quick.builtin.geo", name = "full-access", havingValue = "true")
