@@ -55,7 +55,7 @@ COLLATE='utf8mb4_general_ci';
 **响应数据类型**:`*/*`
 
 
-**接口描述**:<p>获取列表，查询条件组织，请参考： <a href="https://gitlab.inodes.cn/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md">https://gitlab.inodes.cn/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md</a></p>
+**接口描述**:<p>获取列表，查询条件组织，请参考： <a href="https://github.com/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md">https://github.com/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md</a></p>
 
 
 
@@ -156,7 +156,7 @@ COLLATE='utf8mb4_general_ci';
 **响应数据类型**:`*/*`
 
 
-**接口描述**:<p>获取 省/直辖市/自治区 下，查询条件组织，请参考： <a href="https://gitlab.inodes.cn/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md">https://gitlab.inodes.cn/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md</a> </p>
+**接口描述**:<p>获取 省/直辖市/自治区 下，查询条件组织，请参考： <a href="https://github.com/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md">https://github.com/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md</a> </p>
 
 
 
@@ -258,7 +258,7 @@ COLLATE='utf8mb4_general_ci';
 **响应数据类型**:`*/*`
 
 
-**接口描述**:<p>获取某个市下面的县（区），查询条件组织，请参考： <a href="https://gitlab.inodes.cn/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md">https://gitlab.inodes.cn/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md</a></p>
+**接口描述**:<p>获取某个市下面的县（区），查询条件组织，请参考： <a href="https://github.com/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md">https://github.com/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md</a></p>
 
 
 
@@ -360,7 +360,7 @@ COLLATE='utf8mb4_general_ci';
 **响应数据类型**:`*/*`
 
 
-**接口描述**:<p>获取某个县（区）下属的镇（街道），查询条件组织，请参考： <a href="https://gitlab.inodes.cn/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md">https://gitlab.inodes.cn/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md</a></p>
+**接口描述**:<p>获取某个县（区）下属的镇（街道），查询条件组织，请参考： <a href="https://github.com/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md">https://github.com/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md</a></p>
 
 
 
@@ -462,7 +462,7 @@ COLLATE='utf8mb4_general_ci';
 **响应数据类型**:`*/*`
 
 
-**接口描述**:<p>获取某个镇（街道）下属的村（社区）列表，查询条件组织，请参考： <a href="https://gitlab.inodes.cn/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md">https://gitlab.inodes.cn/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md</a></p>
+**接口描述**:<p>获取某个镇（街道）下属的村（社区）列表，查询条件组织，请参考： <a href="https://github.com/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md">https://github.com/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md</a></p>
 
 
 

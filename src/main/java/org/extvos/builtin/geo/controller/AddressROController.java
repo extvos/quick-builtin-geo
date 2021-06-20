@@ -33,7 +33,7 @@ public class AddressROController extends BaseROController<Address, AddressServic
     @Value("${quick.builtin.geo.separator:/}")
     private String pathSeparator;
 
-    @ApiOperation(value = "省/直辖市/自治区 列表", notes = "获取列表，查询条件组织，请参考： https://gitlab.inodes.cn/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md")
+    @ApiOperation(value = "省/直辖市/自治区 列表", notes = "获取列表，查询条件组织，请参考： https://github.com/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md")
     @GetMapping("/provinces")
     public Result<List<Address>> getProvinces(@RequestParam(required = false) Map<String, Object> queries) throws RestletException {
         if (null == queries) {
@@ -43,7 +43,7 @@ public class AddressROController extends BaseROController<Address, AddressServic
         return selectByMap(null, queries);
     }
 
-    @ApiOperation(value = "省/直辖市/自治区 详情", notes = "获取单个详情，查询条件组织，请参考： https://gitlab.inodes.cn/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md")
+    @ApiOperation(value = "省/直辖市/自治区 详情", notes = "获取单个详情，查询条件组织，请参考： https://github.com/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md")
     @GetMapping("/province/{id}")
     public Result<Address> getProvince(@PathVariable Long id, @RequestParam(required = false) Map<String, Object> queries) throws RestletException {
         Result<Address> ra = selectById(id, queries);
@@ -53,7 +53,7 @@ public class AddressROController extends BaseROController<Address, AddressServic
         return ra;
     }
 
-    @ApiOperation(value = "市/城市 列表", notes = "获取 省/直辖市/自治区 下，查询条件组织，请参考： https://gitlab.inodes.cn/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md ")
+    @ApiOperation(value = "市/城市 列表", notes = "获取 省/直辖市/自治区 下，查询条件组织，请参考： https://github.com/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md ")
     @GetMapping("/province/{provinceId}/cities")
     public Result<List<Address>> getCities(@PathVariable Long provinceId, @RequestParam(required = false) Map<String, Object> queries) throws RestletException {
         if (null == queries) {
@@ -64,7 +64,7 @@ public class AddressROController extends BaseROController<Address, AddressServic
         return selectByMap(null, queries);
     }
 
-    @ApiOperation(value = "城市详情", notes = "获取某个城市详情，查询条件组织，请参考： https://gitlab.inodes.cn/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md")
+    @ApiOperation(value = "城市详情", notes = "获取某个城市详情，查询条件组织，请参考： https://github.com/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md")
     @GetMapping("/city/{id}")
     public Result<Address> getCity(@PathVariable Long id, @RequestParam(required = false) Map<String, Object> queries) throws RestletException {
         Result<Address> ra = selectById(id, queries);
@@ -74,7 +74,7 @@ public class AddressROController extends BaseROController<Address, AddressServic
         return ra;
     }
 
-    @ApiOperation(value = "县（区）列表", notes = "获取某个市下面的县（区），查询条件组织，请参考： https://gitlab.inodes.cn/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md")
+    @ApiOperation(value = "县（区）列表", notes = "获取某个市下面的县（区），查询条件组织，请参考： https://github.com/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md")
     @GetMapping("/city/{cityId}/counties")
     public Result<List<Address>> getCounties(@PathVariable Long cityId, @RequestParam(required = false) Map<String, Object> queries) throws RestletException {
         if (null == queries) {
@@ -85,7 +85,7 @@ public class AddressROController extends BaseROController<Address, AddressServic
         return selectByMap(null, queries);
     }
 
-    @ApiOperation(value = "县（区）详情", notes = "获取某个县（区）的详情，查询条件组织，请参考： https://gitlab.inodes.cn/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md")
+    @ApiOperation(value = "县（区）详情", notes = "获取某个县（区）的详情，查询条件组织，请参考： https://github.com/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md")
     @GetMapping("/county/{id}")
     public Result<Address> getCounty(@PathVariable Long id, @RequestParam(required = false) Map<String, Object> queries) throws RestletException {
         Result<Address> ra = selectById(id, queries);
@@ -95,7 +95,7 @@ public class AddressROController extends BaseROController<Address, AddressServic
         return ra;
     }
 
-    @ApiOperation(value = "镇（街道）列表", notes = "获取某个县（区）下属的镇（街道），查询条件组织，请参考： https://gitlab.inodes.cn/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md")
+    @ApiOperation(value = "镇（街道）列表", notes = "获取某个县（区）下属的镇（街道），查询条件组织，请参考： https://github.com/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md")
     @GetMapping("/county/{countyId}/towns")
     public Result<List<Address>> getTowns(@PathVariable Long countyId, @RequestParam(required = false) Map<String, Object> queries) throws RestletException {
         if (null == queries) {
@@ -106,7 +106,7 @@ public class AddressROController extends BaseROController<Address, AddressServic
         return selectByMap(null, queries);
     }
 
-    @ApiOperation(value = "镇（街道）详情", notes = "获取某个镇（街道）的详情，查询条件组织，请参考： https://gitlab.inodes.cn/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md")
+    @ApiOperation(value = "镇（街道）详情", notes = "获取某个镇（街道）的详情，查询条件组织，请参考： https://github.com/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md")
     @GetMapping("/town/{id}")
     public Result<Address> getTown(@PathVariable Long id, @RequestParam(required = false) Map<String, Object> queries) throws RestletException {
         Result<Address> ra = selectById(id, queries);
@@ -116,7 +116,7 @@ public class AddressROController extends BaseROController<Address, AddressServic
         return ra;
     }
 
-    @ApiOperation(value = "村（社区）列表", notes = "获取某个镇（街道）下属的村（社区）列表，查询条件组织，请参考： https://gitlab.inodes.cn/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md")
+    @ApiOperation(value = "村（社区）列表", notes = "获取某个镇（街道）下属的村（社区）列表，查询条件组织，请参考： https://github.com/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md")
     @GetMapping("/town/{townId}/villages")
     public Result<List<Address>> getVillages(@PathVariable Long townId, @RequestParam(required = false) Map<String, Object> queries) throws RestletException {
         if (null == queries) {
@@ -127,7 +127,7 @@ public class AddressROController extends BaseROController<Address, AddressServic
         return selectByMap(null, queries);
     }
 
-    @ApiOperation(value = "村（社区）详情", notes = "村（社区）详情，查询条件组织，请参考： https://gitlab.inodes.cn/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md")
+    @ApiOperation(value = "村（社区）详情", notes = "村（社区）详情，查询条件组织，请参考： https://github.com/quickstart/java-scaffolds/quick-lib-restlet/blob/develop/README.md")
     @GetMapping("/village/{id}")
     public Result<Address> getVillage(@PathVariable Long id, @RequestParam(required = false) Map<String, Object> queries) throws RestletException {
         Result<Address> ra = selectById(id, queries);
