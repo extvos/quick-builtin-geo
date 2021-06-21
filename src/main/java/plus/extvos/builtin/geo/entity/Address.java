@@ -1,4 +1,4 @@
-package org.extvos.builtin.geo.entity;
+package plus.extvos.builtin.geo.entity;
 
 //import javax.persistence.*;
 

@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-org.extvos.builtin.geo.config.BuiltinAutoConfigure
+plus.extvos.builtin.geo.config.BuiltinAutoConfigure

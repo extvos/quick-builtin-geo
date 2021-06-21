@@ -1,4 +1,4 @@
-package org.extvos.builtin.geo.config;
+package plus.extvos.builtin.geo.config;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
@@ -13,9 +13,9 @@ import springfox.documentation.spring.web.plugins.Docket;
 /**
  * @author Mingcai SHEN
  */
-@EntityScan("org.extvos.builtin.geo.entity")
-@MapperScan("org.extvos.builtin.geo.mapper")
-@ComponentScan(basePackages = "org.extvos.builtin.geo")
+@EntityScan("plus.extvos.builtin.geo.entity")
+@MapperScan("plus.extvos.builtin.geo.mapper")
+@ComponentScan(basePackages = "plus.extvos.builtin.geo")
 public class BuiltinAutoConfigure {
     @Bean
     public Docket createGeoDocket() {
@@ -29,7 +29,7 @@ public class BuiltinAutoConfigure {
                         .version(getClass().getPackage().getImplementationVersion())
                         .build())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("org.extvos.builtin.geo"))
+                .apis(RequestHandlerSelectors.basePackage("plus.extvos.builtin.geo"))
                 .build();
     }
 }

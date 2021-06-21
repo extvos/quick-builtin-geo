@@ -1,7 +1,7 @@
-package org.extvos.builtin.geo.config;
+package plus.extvos.builtin.geo.config;
 
 import com.baomidou.mybatisplus.annotation.TableName;
-import org.extvos.builtin.geo.entity.Address;
+import plus.extvos.builtin.geo.entity.Address;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.jdbc.ScriptRunner;
 import org.slf4j.Logger;

@@ -1,7 +1,7 @@
-package org.extvos.builtin.geo.service;
+package plus.extvos.builtin.geo.service;
 
-import org.extvos.builtin.geo.entity.Address;
-import org.extvos.restlet.service.BaseService;
+import plus.extvos.builtin.geo.entity.Address;
+import plus.extvos.restlet.service.BaseService;
 
 import java.util.List;
 

@@ -1,9 +1,9 @@
-package org.extvos.builtin.geo.service.impl;
+package plus.extvos.builtin.geo.service.impl;
 
-import org.extvos.builtin.geo.entity.Address;
-import org.extvos.builtin.geo.mapper.AddressMapper;
-import org.extvos.builtin.geo.service.AddressService;
-import org.extvos.restlet.service.impl.BaseServiceImpl;
+import plus.extvos.builtin.geo.entity.Address;
+import plus.extvos.builtin.geo.mapper.AddressMapper;
+import plus.extvos.builtin.geo.service.AddressService;
+import plus.extvos.restlet.service.impl.BaseServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
