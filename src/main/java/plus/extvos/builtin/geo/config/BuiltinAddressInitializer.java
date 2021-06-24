@@ -1,7 +1,6 @@
 package plus.extvos.builtin.geo.config;
 
 import com.baomidou.mybatisplus.annotation.TableName;
-import plus.extvos.builtin.geo.entity.Address;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.jdbc.ScriptRunner;
 import org.slf4j.Logger;
@@ -10,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
+import plus.extvos.builtin.geo.entity.Address;
 
 import javax.sql.DataSource;
 import java.io.Reader;
@@ -35,7 +35,7 @@ public class BuiltinAddressInitializer implements ApplicationRunner {
         ScriptRunner runner = new ScriptRunner(conn);
         runner.setLogWriter(dataSource.getLogWriter());
         String[] tableNames = new String[]{
-                Address.class.getAnnotation(TableName.class).value(),
+            Address.class.getAnnotation(TableName.class).value(),
         };
         for (int i = 0; i < tableNames.length; i++) {
             tableNames[i] = "'" + tableNames[i] + "'";

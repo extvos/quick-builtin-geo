@@ -20,16 +20,16 @@ public class BuiltinAutoConfigure {
     @Bean
     public Docket createGeoDocket() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .groupName("地址信息服务")
-                .apiInfo(new ApiInfoBuilder()
-                        .title("地址信息服务")
-                        .description("Builtin GEO services for generic use.")
-                        .contact(new Contact("Mingcai SHEN","https://github.com/","archsh@gmail.com"))
-                        .termsOfServiceUrl("https://github.com/quickstart/java-scaffolds/quick-builtin-geo.git")
-                        .version(getClass().getPackage().getImplementationVersion())
-                        .build())
-                .select()
-                .apis(RequestHandlerSelectors.basePackage("plus.extvos.builtin.geo"))
-                .build();
+            .groupName("地址信息服务")
+            .apiInfo(new ApiInfoBuilder()
+                .title("地址信息服务")
+                .description("Builtin GEO services for generic use.")
+                .contact(new Contact("Mingcai SHEN", "https://github.com/", "archsh@gmail.com"))
+                .termsOfServiceUrl("https://github.com/quickstart/java-scaffolds/quick-builtin-geo.git")
+                .version(getClass().getPackage().getImplementationVersion())
+                .build())
+            .select()
+            .apis(RequestHandlerSelectors.basePackage("plus.extvos.builtin.geo"))
+            .build();
     }
 }
