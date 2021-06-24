@@ -1,8 +1,9 @@
 package plus.extvos.builtin.geo.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import plus.extvos.builtin.geo.entity.Address;
-import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
