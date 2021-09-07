@@ -25,7 +25,7 @@ public class BuiltinAutoConfigure {
                 .title("地址信息服务")
                 .description("Builtin GEO services for generic use.")
                 .contact(new Contact("Mingcai SHEN", "https://github.com/", "archsh@gmail.com"))
-                .termsOfServiceUrl("https://github.com/quickstart/java-scaffolds/quick-builtin-geo.git")
+                .termsOfServiceUrl("https://github.com/extvos/quick-builtin-geo.git")
                 .version(getClass().getPackage().getImplementationVersion())
                 .build())
             .select()
