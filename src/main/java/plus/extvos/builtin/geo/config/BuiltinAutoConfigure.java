@@ -19,7 +19,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 @ComponentScan(basePackages = "plus.extvos.builtin.geo")
 public class BuiltinAutoConfigure {
     @Bean
-    @ConditionalOnProperty(prefix = "spring.swagger", name = "enabled", havingValue = "true")
+    @ConditionalOnProperty(prefix = "spring.swagger", name = "disabled", havingValue = "false", matchIfMissing = true)
     public Docket createGeoDocket() {
         return new Docket(DocumentationType.SWAGGER_2)
             .groupName("地址信息服务")
