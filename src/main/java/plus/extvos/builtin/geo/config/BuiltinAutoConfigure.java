@@ -1,6 +1,7 @@
 package plus.extvos.builtin.geo.config;
 
 import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -18,6 +19,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 @ComponentScan(basePackages = "plus.extvos.builtin.geo")
 public class BuiltinAutoConfigure {
     @Bean
+    @ConditionalOnProperty(prefix = "spring.swagger", name = "enabled", havingValue = "true")
     public Docket createGeoDocket() {
         return new Docket(DocumentationType.SWAGGER_2)
             .groupName("地址信息服务")
