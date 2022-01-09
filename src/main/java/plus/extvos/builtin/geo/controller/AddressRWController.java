@@ -9,7 +9,7 @@ import plus.extvos.builtin.geo.entity.Address;
 import plus.extvos.builtin.geo.service.AddressService;
 import plus.extvos.restlet.QuerySet;
 import plus.extvos.restlet.controller.BaseController;
-import plus.extvos.restlet.exception.RestletException;
+import plus.extvos.common.exception.ResultException;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
@@ -31,13 +31,13 @@ public class AddressRWController extends BaseController<Address, AddressService>
     }
 
     @Override
-    public Address preUpdate(Serializable id, Address entity) throws RestletException {
+    public Address preUpdate(Serializable id, Address entity) throws ResultException {
         entity.setUpdated(new Timestamp(System.currentTimeMillis()));
         return entity;
     }
 
     @Override
-    public Address preUpdate(QuerySet<Address> qs, Address entity) throws RestletException {
+    public Address preUpdate(QuerySet<Address> qs, Address entity) throws ResultException {
         entity.setUpdated(new Timestamp(System.currentTimeMillis()));
         return entity;
     }
