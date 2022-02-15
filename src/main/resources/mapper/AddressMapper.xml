@@ -2,7 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="plus.extvos.builtin.geo.mapper.AddressMapper">
     <select id="getParentPathByIds" resultType="java.lang.String" parameterType="java.util.List">
-        SELECT GROUP_CONCAT(DISTINCT name ORDER BY id ASC SEPARATOR '/') FROM builtin_addresses WHERE id IN
+        SELECT name FROM builtin_addresses WHERE id IN
         <foreach collection="parentIds" item="id" index="i" open="(" close=")" separator=",">#{id}</foreach>
+        ORDER BY id ASC
     </select>
 </mapper>

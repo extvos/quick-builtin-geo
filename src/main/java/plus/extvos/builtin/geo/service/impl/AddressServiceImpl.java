@@ -26,7 +26,7 @@ public class AddressServiceImpl extends BaseServiceImpl<AddressMapper, Address> 
 
     @Override
     public String getParentNames(List<Integer> parentIds) {
-        return getMapper().getParentPathByIds(parentIds);
+        return String.join("/", getMapper().getParentPathByIds(parentIds));
     }
 
 
