@@ -61,7 +61,7 @@ public class Address implements Serializable {
      *
      * @see Grade
      */
-    private int grade;
+    private Integer grade;
 
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     private String pinyin;
@@ -145,11 +145,11 @@ public class Address implements Serializable {
         this.parentPath = parentPath;
     }
 
-    public int getGrade() {
+    public Integer getGrade() {
         return grade;
     }
 
-    public void setGrade(int grade) {
+    public void setGrade(Integer grade) {
         this.grade = grade;
     }
 

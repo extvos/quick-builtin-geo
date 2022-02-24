@@ -19,5 +19,5 @@ public interface AddressMapper extends BaseMapper<Address> {
      * @param parentIds a list of id
      * @return String
      */
-    String getParentPathByIds(@Param("parentIds") List<Integer> parentIds);
+    List<String> getParentPathByIds(@Param("parentIds") List<Integer> parentIds);
 }
