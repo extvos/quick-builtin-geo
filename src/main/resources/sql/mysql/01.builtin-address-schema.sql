@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS `builtin_addresses` (
 	`id` BIGINT(20) NOT NULL COMMENT '主键ID，与国标匹配',
-	`name` VARCHAR(32) NOT NULL COMMENT '行政区名称' COLLATE 'utf8mb4_general_ci',
+	`name` VARCHAR(64) NOT NULL COMMENT '行政区名称' COLLATE 'utf8mb4_general_ci',
 	`grade` INT(11) NULL DEFAULT 0 COMMENT '级别： 1=省，2=市，3=县，4=镇，5=乡' ,
 	`city_code` VARCHAR(12) NOT NULL DEFAULT '' COMMENT '城市编码' COLLATE 'utf8mb4_general_ci',
 	`adcode` VARCHAR(12) NOT NULL DEFAULT '' COMMENT '区域编码' COLLATE 'utf8mb4_general_ci',
