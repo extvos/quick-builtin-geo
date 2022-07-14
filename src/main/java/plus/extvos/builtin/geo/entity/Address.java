@@ -30,6 +30,10 @@ public class Address implements Serializable {
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     private String cityCode;
 
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
+    @TableField("adcode")
+    private String adCode;
+
     private String name;
 
     private Double lat;
@@ -103,6 +107,14 @@ public class Address implements Serializable {
 
     public void setCityCode(String cityCode) {
         this.cityCode = cityCode;
+    }
+
+    public String getAdCode() {
+        return adCode;
+    }
+
+    public void setAdCode(String adCode) {
+        this.adCode = adCode;
     }
 
     public String getName() {

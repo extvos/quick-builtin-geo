@@ -12,6 +12,7 @@ import plus.extvos.builtin.geo.entity.Address;
 import plus.extvos.builtin.geo.entity.Grade;
 import plus.extvos.builtin.geo.service.AddressService;
 import plus.extvos.common.Result;
+import plus.extvos.restlet.QuerySet;
 import plus.extvos.restlet.controller.BaseROController;
 import plus.extvos.common.exception.ResultException;
 
@@ -38,6 +39,7 @@ public class AddressROController extends BaseROController<Address, AddressServic
             queries = new HashMap<>();
         }
         queries.put("grade", Grade.Province.value());
+        queries.put("__excludes", "borders");
         return selectByMap(null, queries);
     }
 
@@ -59,6 +61,7 @@ public class AddressROController extends BaseROController<Address, AddressServic
         }
         queries.put("grade", Grade.City.value());
         queries.put("parentId", provinceId);
+        queries.put("__excludes", "borders");
         return selectByMap(null, queries);
     }
 
@@ -80,6 +83,7 @@ public class AddressROController extends BaseROController<Address, AddressServic
         }
         queries.put("grade", Grade.County.value());
         queries.put("parentId", cityId);
+        queries.put("__excludes", "borders");
         return selectByMap(null, queries);
     }
 
@@ -101,6 +105,7 @@ public class AddressROController extends BaseROController<Address, AddressServic
         }
         queries.put("grade", Grade.Town.value());
         queries.put("parentId", countyId);
+        queries.put("__excludes", "borders");
         return selectByMap(null, queries);
     }
 
@@ -122,6 +127,7 @@ public class AddressROController extends BaseROController<Address, AddressServic
         }
         queries.put("grade", Grade.Village.value());
         queries.put("parentId", townId);
+        queries.put("__excludes", "borders");
         return selectByMap(null, queries);
     }
 
@@ -154,5 +160,16 @@ public class AddressROController extends BaseROController<Address, AddressServic
             address.setParentNames("/".equals(pathSeparator) ? names : names.replace("/", pathSeparator));
         }
         return address;
+    }
+
+    @Override
+    public QuerySet<Address> preSelect(QuerySet<Address> qs) throws ResultException {
+        Set<String> excludes = qs.getExcludeCols();
+        if (null == excludes) {
+            excludes = new HashSet<>();
+        }
+        excludes.add("borders");
+        qs.setExcludeCols(excludes);
+        return super.preSelect(qs);
     }
 }
