@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS builtin_addresses (
 	PRIMARY KEY (id)
 )
 ;
-COMMENT ON TABLE builtin_role_permissions IS '内置地址数据';
+COMMENT ON TABLE builtin_addresses IS '内置地址数据';
 CREATE INDEX builtin_addresses_idx_grade ON builtin_addresses (grade);
 CREATE INDEX builtin_addresses_idx_parent_id ON builtin_addresses (parent_id);
 CREATE INDEX builtin_addresses_idx_city_code ON builtin_addresses (city_code);
