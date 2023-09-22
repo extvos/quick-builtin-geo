@@ -12,6 +12,18 @@ public class Coordinate implements Serializable {
 //        this.lng = 0.0;
     }
 
+    public Coordinate(String loc) {
+        if (null == loc || loc.isEmpty()) {
+            return;
+        }
+        String[] ls = loc.split(",", 2);
+        if (ls.length != 2) {
+            return;
+        }
+        this.lat = Double.parseDouble(ls[0]);
+        this.lng = Double.parseDouble(ls[1]);
+    }
+
     public Coordinate(Double lat, Double lng) {
         this.lat = lat;
         this.lng = lng;
